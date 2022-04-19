@@ -43,6 +43,12 @@ const isValidBody = (req, res, next) => {
 rotausuario.get('/', (req, res) => {
   res.json(usuarios);
 });
+
+rotausuario.get('/:id', getusuario, (req, res) => {
+  const { usuario } = req;
+  res.json(usuario);
+});
+
 ////ANDLISTAR////
 
 ////DELETAR////
